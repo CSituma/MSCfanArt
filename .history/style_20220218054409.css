@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+section {
+    width: 100%;
+    height: 100vh;
+   
+    display: flex;
+    align-items: center;
+    background: url('Images/MSC.JPG') center no-repeat;
+    filter: contrast(10);
+    overflow: hidden;
+    justify-content: center;
+}
+
+ .headmods div, .mods div{
+    width: 140px;
+    filter: blur(40px);
+    height: 140px;
+    background: green;
+    display: inline-block;
+    border-bottom-left-radius: 50px;
+    border:none;
+    outline:none;
+    animation: animate 30s ease-in-out infinite;
+}
+
+.wrapper{
+    filter: none;
+    z-index:10000;
+    animation: animate 20s ease-in-out infinite;
+    height:100%;
+    position: relative;
+    top:-600px;
+    letter-spacing: 0.2rem;
+    box-shadow: 10px 10px  black;
+    background-color: black;
+    color:white;
+    width: 300px;
+
+    padding:20px;
+}
+
+.wrapper button{
+
+    padding:0.2rem;
+    color: black;
+    font-weight:bold;
+    position: relative;
+}
+.wrapper p{
+line-height: 2rem;
+    margin-top:2rem;
+}
+
+.wrapper .disclaimer{
+margin-top: 0;
+letter-spacing: 0;
+line-height: 1.5rem;
+}
+
+
+@keyframes animate {
+
+    0% {
+        margin: 10px;
+    }
+
+    20% {
+        margin: -10px;
+    }
+    40% {
+        margin: -20px;
+    }
+    60% {
+        margin: -30px;
+    }
+    80% {
+        margin: -10px;
+    }
+
+    100% {
+        margin: 10px;
+    }
+
+}
+@keyframes animate {
+
+    0% {
+        margin: 0px;
+    }
+
+    50% {
+        margin: 10px;
+    }
+
+
+
+    100% {
+        margin: 0px;
+    }
+
+}
+
+
+.glow, .timer{
+  
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 2.5px #00e660, 0 0 3px #e60073, 0 0 3.5px #e60073, 0 0 4px #00e660ee, 0 0 4.5px #08f36a;
+    }
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 3px #00e660a2, 0 0 3.5px #00e660, 0 0 4px #ff4da6, 0 0 4.5px #ff4da6, 0 0 5px #00e6609c, 0 0 5.5px #00e660;
+    }
+  }
+
+.timer{
+    color:pink;
+}
+
+/* /////RESPOSIVENES/// */
+
+@media screen and (max-width:870px) {
+    
+    section{margin-left:200px}
+}
+
+@media screen and (max-width:657px) {
+    section{margin-left:0px}
+ 
+    .wrapper{
+        z-index: -10000;
+    }
+    .watch{
+        position: absolute;
+        top:0px;
+        right:0;
+        z-index: 10000;
+    }
+}
