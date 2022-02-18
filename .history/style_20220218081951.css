@@ -29,7 +29,7 @@ section {
     border-bottom-left-radius: 50px;
     border:none;
     outline:none;
-    animation: animate 20s ease-in-out infinite;
+    animation: animate 15s ease-in-out infinite;
 }
 
 .wrapper{
@@ -88,7 +88,7 @@ line-height: 1.5rem;
     }
 
     100% {
-        margin: 10px;
+        margin: -40px;
     }
 
 }
